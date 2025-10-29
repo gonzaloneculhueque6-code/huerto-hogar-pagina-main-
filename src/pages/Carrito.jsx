@@ -1,9 +1,6 @@
-// src/pages/Carrito.jsx
-
-// --> Añadido Link, useNavigate, regionesYComunas
 import { useEffect, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import regionesYComunas from '../data/regionComuna.js'; // <-- Asegúrate que la ruta es correcta
+import regionesYComunas from '../data/regionComuna.js';
 
 // --> Recibe user como prop
 export default function Carrito({ user }) {
@@ -18,7 +15,7 @@ export default function Carrito({ user }) {
   const [comunasDisponibles, setComunasDisponibles] = useState([]);
   // --- Fin Estados Formulario ---
 
-  // Función sync (sin cambios)
+  
   const sync = () => {
     const cartData = JSON.parse(localStorage.getItem('carrito') || '[]');
     setCarrito(cartData);
